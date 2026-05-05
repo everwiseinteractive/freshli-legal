@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bank Holiday BBQ Saver · Freshli</title>
+<meta name="description" content="Track every BBQ leftover, list a Magic Bag, and earn bonus karma over the August Bank Holiday.">
+
+<!-- iOS smart banner: opens the Freshli app if installed, otherwise links to the App Store. -->
+<meta name="apple-itunes-app" content="app-id=0000000000, app-argument=freshli://events/bbq-saver">
+
+<!-- Open Graph / Twitter card -->
+<meta property="og:title"        content="Bank Holiday BBQ Saver · Freshli">
+<meta property="og:description"  content="Track every BBQ leftover, list a Magic Bag, and earn bonus karma over the August Bank Holiday.">
+<meta property="og:url"          content="https://freshli.app/events/bbq-saver.html">
+<meta property="og:type"         content="website">
+<meta property="og:image"        content="https://freshli.app/events/og/bbq-saver.png">
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:title"       content="Bank Holiday BBQ Saver · Freshli">
+<meta name="twitter:description" content="Track every BBQ leftover, list a Magic Bag, and earn bonus karma over the August Bank Holiday.">
+<meta name="twitter:image"       content="https://freshli.app/events/og/bbq-saver.png">
+
+<link rel="canonical" href="https://freshli.app/events/bbq-saver.html">
+
+<style>
+  :root {
+    --accent:  #F59E0B;
+    --bg-a:    #2A0F00;
+    --bg-b:    #5C2A00;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; -webkit-font-smoothing: antialiased; }
+  html, body { min-height: 100vh; background: var(--bg-a); color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', system-ui, sans-serif;
+    line-height: 1.5;
+  }
+  body {
+    background:
+      radial-gradient(ellipse 90% 50% at 30% 25%, color-mix(in srgb, var(--accent) 35%, transparent) 0%, transparent 65%),
+      linear-gradient(160deg, var(--bg-a) 0%, var(--bg-b) 60%, var(--bg-a) 100%);
+    background-attachment: fixed;
+    min-height: 100vh; padding: 64px 24px;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .badge { display: inline-flex; align-items: center; gap: 12px;
+    padding: 10px 22px; border-radius: 999px;
+    background: rgba(255,255,255,0.10);
+    border: 1.5px solid rgba(255,255,255,0.22);
+    font-size: 14px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+    color: #fff; margin-bottom: 28px;
+  }
+  .badge::before { content: ''; width: 10px; height: 10px; border-radius: 50%;
+    background: var(--accent); box-shadow: 0 0 14px var(--accent); }
+  h1 { font-size: clamp(40px, 7vw, 64px); font-weight: 900; line-height: 1.05; letter-spacing: -0.025em;
+    margin-bottom: 18px;
+    background: linear-gradient(160deg, #FFFFFF 0%, var(--accent) 100%);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .tag { font-size: clamp(20px, 3vw, 26px); font-weight: 700;
+    color: rgba(255,255,255,0.92); margin-bottom: 18px; }
+  .sub { font-size: 17px; color: rgba(255,255,255,0.72); max-width: 580px; margin-bottom: 32px; }
+  .live { display: inline-block; padding: 8px 16px; border-radius: 8px;
+    background: rgba(255,255,255,0.10); font-size: 14px; font-weight: 600;
+    color: rgba(255,255,255,0.85); margin-bottom: 48px; }
+
+  .cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 48px; }
+  .btn { display: inline-flex; align-items: center; justify-content: center;
+    padding: 14px 28px; border-radius: 999px; font-size: 16px; font-weight: 700;
+    text-decoration: none; transition: transform 0.15s ease;
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-primary { background: #FFFFFF; color: var(--bg-a);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.35); }
+  .btn-secondary { background: rgba(255,255,255,0.10); color: #FFFFFF;
+    border: 1.5px solid rgba(255,255,255,0.25); }
+
+  .why { padding: 28px 30px; background: rgba(255,255,255,0.06);
+    border: 1.5px solid rgba(255,255,255,0.12); border-radius: 24px;
+    margin-bottom: 32px; backdrop-filter: blur(20px); }
+  .why h2 { font-size: 14px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 12px; }
+  .why p { font-size: 16px; color: rgba(255,255,255,0.85); }
+
+  footer { margin-top: 64px; padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.10);
+    font-size: 14px; color: rgba(255,255,255,0.45); }
+  footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
+  footer a:hover { color: #FFFFFF; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <span class="badge">Freshli In-App Event</span>
+  <h1>Bank Holiday BBQ Saver</h1>
+  <p class="tag">Don't waste the feast. Share the leftovers.</p>
+  <p class="sub">Track every BBQ leftover, list a Magic Bag, and earn bonus karma over the August Bank Holiday.</p>
+  <p class="live">Live 22 – 31 August 2026</p>
+
+  <div class="cta-row">
+    <a class="btn btn-primary" href="freshli://events/bbq-saver">Open in Freshli</a>
+    <a class="btn btn-secondary" href="https://apps.apple.com/app/id0000000000">Get Freshli on the App Store</a>
+  </div>
+
+  <div class="why">
+    <h2>What is Freshli?</h2>
+    <p>Freshli is a private, on-device food rescue companion. Track everything in your fridge, cook from what's about to expire with Apple Intelligence, and share surplus with neighbours — all from your iPhone, iPad, and Apple Watch.</p>
+  </div>
+
+  <footer>
+    <a href="/">freshli.app</a> •
+    <a href="/privacy-policy.html">Privacy</a> •
+    <a href="/terms-of-use.html">Terms</a> •
+    <a href="/support.html">Support</a>
+  </footer>
+</main>
+</body>
+</html>
