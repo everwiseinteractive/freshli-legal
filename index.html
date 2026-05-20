@@ -1,296 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Freshli - Food Waste Tracker | Save Food, Money & the Planet</title>
-    <meta name="description" content="Freshli helps you track expiry dates, discover recipes, share surplus food with neighbors, and reduce food waste. Download free on iOS.">
-    <meta name="keywords" content="food waste tracker, expiry date tracker, pantry management, recipe suggestions, food sharing, sustainability app">
-    <meta property="og:title" content="Freshli - Food Waste Tracker">
-    <meta property="og:description" content="Stop wasting food and start saving money. Track expiry dates, discover recipes, and share surplus food with your community.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://freshli.app">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.7;
-            color: #1d1d1f;
-            background: #ffffff;
-        }
-        .hero {
-            background: linear-gradient(135deg, #1a8a3f 0%, #34C759 50%, #30D158 100%);
-            padding: 80px 20px;
-            text-align: center;
-            color: white;
-            min-height: 500px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .hero-logo {
-            width: 100px;
-            height: 100px;
-            background: rgba(255,255,255,0.2);
-            border-radius: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            margin-bottom: 24px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.3);
-        }
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 16px;
-            letter-spacing: -0.02em;
-        }
-        .hero .subtitle {
-            font-size: 1.4rem;
-            opacity: 0.95;
-            margin-bottom: 32px;
-            max-width: 600px;
-        }
-        .hero .cta {
-            display: inline-block;
-            background: white;
-            color: #1a8a3f;
-            padding: 16px 40px;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .hero .cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-        }
-        .features {
-            padding: 80px 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        .features h2 {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 48px;
-            color: #1d1d1f;
-        }
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 32px;
-        }
-        .feature-card {
-            background: #f5f5f7;
-            border-radius: 20px;
-            padding: 32px;
-            text-align: center;
-        }
-        .feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: 16px;
-        }
-        .feature-card h3 {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: #1d1d1f;
-        }
-        .feature-card p {
-            color: #86868b;
-            font-size: 0.95rem;
-        }
-        .impact-section {
-            background: #f5f5f7;
-            padding: 80px 20px;
-            text-align: center;
-        }
-        .impact-section h2 {
-            font-size: 2rem;
-            margin-bottom: 16px;
-        }
-        .impact-section .tagline {
-            color: #86868b;
-            font-size: 1.1rem;
-            margin-bottom: 48px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .impact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 24px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .impact-stat {
-            background: white;
-            border-radius: 16px;
-            padding: 28px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-        }
-        .impact-stat .number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #34C759;
-        }
-        .impact-stat .label {
-            color: #86868b;
-            font-size: 0.9rem;
-            margin-top: 4px;
-        }
-        .download-section {
-            padding: 80px 20px;
-            text-align: center;
-            background: white;
-        }
-        .download-section h2 {
-            font-size: 2rem;
-            margin-bottom: 16px;
-        }
-        .download-section p {
-            color: #86868b;
-            margin-bottom: 32px;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .app-store-badge {
-            display: inline-block;
-            background: #000;
-            color: white;
-            padding: 14px 32px;
-            border-radius: 12px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: opacity 0.2s;
-        }
-        .app-store-badge:hover { opacity: 0.85; }
-        .footer {
-            background: #1d1d1f;
-            color: #86868b;
-            padding: 40px 20px;
-            text-align: center;
-        }
-        .footer-links {
-            margin-bottom: 16px;
-        }
-        .footer-links a {
-            color: #a1a1a6;
-            text-decoration: none;
-            margin: 0 16px;
-            font-size: 0.9rem;
-        }
-        .footer-links a:hover { color: white; }
-        .footer p {
-            font-size: 0.85rem;
-            color: #6e6e73;
-        }
-        @media (max-width: 600px) {
-            .hero h1 { font-size: 2rem; }
-            .hero .subtitle { font-size: 1.1rem; }
-            .features h2, .impact-section h2, .download-section h2 { font-size: 1.5rem; }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join me on Freshli — both win +100 Karma</title>
+  <meta name="description" content="A friend just invited you to Freshli — track your pantry, get AI recipes, and share surplus food with neighbours in your area. Both of you earn +100 Karma when you sign up." />
+  <meta name="theme-color" content="#22C55E" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
+
+  <!-- Apple Smart App Banner — iOS Safari shows the native "Open in App Store"
+       banner above the page so the recipient is one tap from installing.
+       affiliate-data and app-argument are reserved for future use. -->
+  <meta name="apple-itunes-app" content="app-id=6761957596" />
+
+  <!-- Universal Link — iOS intercepts this and opens the app if installed,
+       routing through URLRouterService into the .invite case so the code
+       is captured + redeemed automatically after sign-in. -->
+  <link rel="canonical" href="https://freshli.app/i/" />
+
+  <!-- Open Graph — rich preview in iMessage, WhatsApp, Slack, Discord,
+       Telegram, X, etc. The image is the same 1200x630 hero card the
+       homepage uses for now; v1.3 will swap in a personalised card. -->
+  <meta property="og:title" content="Join me on Freshli — we both get +100 Karma" />
+  <meta property="og:description" content="Track your pantry, rescue food before it expires, and share surplus with neighbours nearby. Used my invite link and we both unlock +100 Karma." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://freshli.app/i/" />
+  <meta property="og:image" content="https://freshli.app/og-invite.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Freshli" />
+
+  <!-- Twitter / X card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Join me on Freshli" />
+  <meta name="twitter:description" content="Track your pantry, rescue food, share with neighbours — both get +100 Karma when you sign up." />
+  <meta name="twitter:image" content="https://freshli.app/og-invite.png" />
+
+  <style>
+    :root {
+      --green: #22C55E;
+      --green-dark: #16A34A;
+      --bg: #F7FAF7;
+      --text: #0F172A;
+      --text-secondary: #64748B;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+      background: linear-gradient(180deg, #E6FAEE 0%, var(--bg) 60%);
+      color: var(--text);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+    .hero {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 60px 24px 40px;
+      text-align: center;
+    }
+    .icon-card {
+      width: 96px;
+      height: 96px;
+      margin: 0 auto 24px;
+      border-radius: 22px;
+      background: white;
+      box-shadow: 0 12px 32px rgba(34, 197, 94, 0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .icon-card img { width: 100%; height: 100%; object-fit: cover; }
+    h1 {
+      font-size: 32px;
+      line-height: 1.1;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin: 0 0 12px;
+    }
+    .subtitle {
+      font-size: 17px;
+      line-height: 1.45;
+      color: var(--text-secondary);
+      margin: 0 0 28px;
+    }
+    .reward {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: rgba(34, 197, 94, 0.12);
+      color: var(--green-dark);
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+    .reward::before {
+      content: "✦";
+      font-size: 18px;
+    }
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 260px;
+      padding: 16px 24px;
+      border-radius: 14px;
+      background: var(--green);
+      color: white;
+      font-size: 17px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 8px 24px rgba(34, 197, 94, 0.32);
+      transition: transform 0.12s ease, box-shadow 0.12s ease;
+    }
+    .cta:hover { transform: translateY(-1px); box-shadow: 0 12px 32px rgba(34, 197, 94, 0.4); }
+    .cta:active { transform: translateY(0); }
+    .small {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-top: 18px;
+      line-height: 1.5;
+    }
+    .small a { color: var(--green-dark); text-decoration: none; }
+    .features {
+      max-width: 480px;
+      margin: 32px auto 60px;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+    .feature {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 16px;
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+    }
+    .feature-emoji { font-size: 22px; }
+    .feature-text { font-size: 14px; line-height: 1.35; color: var(--text); }
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+  </style>
 </head>
 <body>
-    <div class="hero">
-        <div class="hero-logo">&#127807;</div>
-        <h1>Freshli</h1>
-        <p class="subtitle">Save Food, Money & the Planet. The all-in-one food waste tracker that helps you live more sustainably.</p>
-        <a href="#download" class="cta">Download for iOS</a>
+  <main class="hero">
+    <div class="icon-card">
+      <img src="../icon.png" alt="Freshli app icon" />
     </div>
 
-    <div class="features">
-        <h2>Everything You Need to Waste Less</h2>
-        <div class="feature-grid">
-            <div class="feature-card">
-                <div class="feature-icon">&#128203;</div>
-                <h3>Smart Pantry Tracking</h3>
-                <p>Scan receipts and labels to instantly add items. Get timely alerts before food expires so nothing goes to waste.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">&#127859;</div>
-                <h3>Recipe Rescue</h3>
-                <p>Discover delicious recipes using ingredients you already have, prioritizing items closest to their expiry date.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">&#129309;</div>
-                <h3>Community Sharing</h3>
-                <p>Share surplus food with neighbors through Freshli Circles. Build a more sustainable local food network together.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">&#128200;</div>
-                <h3>Impact Dashboard</h3>
-                <p>Track your personal food waste reduction with beautiful analytics. See the real difference you're making.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">&#128722;</div>
-                <h3>Smart Grocery Lists</h3>
-                <p>Plan shopping based on what you actually need. Freshli learns your habits and helps you buy smarter.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">&#127881;</div>
-                <h3>Achievements & Streaks</h3>
-                <p>Earn milestones and celebrate your progress. Keep your streak alive and make sustainability a daily habit.</p>
-            </div>
-        </div>
+    <h1 id="hero-title">Join your neighbour on Freshli</h1>
+    <p class="subtitle">A friend just invited you. Track your pantry, get AI recipes for what's about to expire, and share surplus with neighbours nearby.</p>
+
+    <div class="reward">Both of you earn +100 Karma</div>
+
+    <div>
+      <a class="cta" id="install-cta"
+         href="https://apps.apple.com/app/freshli-pantry-food-saver/id6761957596"
+         aria-label="Get Freshli on the App Store">
+        Get Freshli — free
+      </a>
     </div>
 
-    <div class="impact-section">
-        <h2>Making a Real Difference</h2>
-        <p class="tagline">Every item saved from the bin counts. Track your impact and see how small changes add up.</p>
-        <div class="impact-grid">
-            <div class="impact-stat">
-                <div class="number">30%</div>
-                <div class="label">of food produced globally is wasted</div>
-            </div>
-            <div class="impact-stat">
-                <div class="number">8-10%</div>
-                <div class="label">of global emissions from food waste</div>
-            </div>
-            <div class="impact-stat">
-                <div class="number">$1,500+</div>
-                <div class="label">average household food waste per year</div>
-            </div>
-        </div>
-    </div>
+    <p class="small">
+      Already have it installed? <a href="freshli://i/">Open in Freshli</a> · iOS 26 only · No ads, no tracking.
+    </p>
+  </main>
 
-    <div class="download-section" id="download">
-        <h2>Start Your Zero Waste Journey</h2>
-        <p>Download Freshli today and join thousands already making a difference, one meal at a time.</p>
-        <a href="https://apps.apple.com/us/app/freshli-pantry-food-saver/id6761957596" class="app-store-badge">Download on the App Store</a>
-    </div>
+  <section class="features" aria-label="What Freshli does">
+    <div class="feature"><span class="feature-emoji" aria-hidden="true">📦</span><span class="feature-text">Track every fridge item. AI knows what's about to expire.</span></div>
+    <div class="feature"><span class="feature-emoji" aria-hidden="true">🍳</span><span class="feature-text">Apple Intelligence writes recipes for your exact pantry.</span></div>
+    <div class="feature"><span class="feature-emoji" aria-hidden="true">🤝</span><span class="feature-text">Share surplus with neighbours within walking distance.</span></div>
+    <div class="feature"><span class="feature-emoji" aria-hidden="true">🌍</span><span class="feature-text">Anonymised data goes to your real local council.</span></div>
+  </section>
 
-    <div class="footer">
-        <div class="footer-links">
-            <a href="privacy-policy.html">Privacy Policy</a>
-            <a href="terms-of-use.html">Terms of Use</a>
-            <a href="privacy-choices.html">Privacy Choices</a>
-            <a href="support.html">Support</a>
-        </div>
-        <p>&copy; 2026 Freshli. All rights reserved.</p>
-        <p style="margin-top:8px;">Made with care for you and the planet.</p>
-    </div>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/69d7bc52853c8f1c33fbf27c/1jlpbf962';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+  <footer>
+    © 2026 Alderframe · For the people. For the planet. ·
+    <a href="../privacy.html" style="color:inherit;">Privacy</a> ·
+    <a href="../terms.html" style="color:inherit;">Terms</a>
+  </footer>
+
+  <script>
+    // Lightweight progressive enhancement: detect the inviter code in the
+    // URL path (/i/CODE123) and surface it in the page heading so the
+    // recipient sees a personal welcome. Also passes the code through to
+    // the App Store via the affiliate-data field so iOS can deep-link
+    // the user straight into the .invite route once they install.
+    (function () {
+      var path = window.location.pathname.replace(/\/+$/, '');
+      var match = path.match(/\/i\/([A-Z0-9]{4,12})$/i);
+      if (!match) return;
+      var code = match[1].toUpperCase();
+
+      // Personalised heading
+      var heading = document.getElementById('hero-title');
+      if (heading) {
+        heading.textContent = 'You’ve been invited to Freshli';
+      }
+
+      // Open-in-app button (custom scheme fallback)
+      var openLink = document.querySelector('a[href^="freshli://"]');
+      if (openLink) openLink.href = 'freshli://i/' + encodeURIComponent(code);
+
+      // Carry the code to the App Store via the App Store affiliate-data
+      // field. iOS reads `meta[name=apple-itunes-app]` first; we update
+      // it so when the recipient lands in the App Store and installs,
+      // the first launch can pick up the code via the standard
+      // "deferred deep link" pattern (the apple-app-site-association
+      // file already declares /i/* paths).
+      var banner = document.querySelector('meta[name="apple-itunes-app"]');
+      if (banner) {
+        banner.setAttribute(
+          'content',
+          'app-id=6761957596, app-argument=https://freshli.app/i/' + encodeURIComponent(code)
+        );
+      }
+
+      // Update CTA button so it includes the campaign-token tracking too
+      var cta = document.getElementById('install-cta');
+      if (cta) {
+        cta.href = 'https://apps.apple.com/app/freshli-pantry-food-saver/id6761957596?ct=invite_' + encodeURIComponent(code);
+      }
+
+      // Best-effort universal-link bounce: if the app IS installed, iOS
+      // will already have intercepted us before this JS even runs.
+      // If it didn't, that means the app isn't installed — show the
+      // page and let the user tap the CTA.
+    })();
+  </script>
 </body>
 </html>

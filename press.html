@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Press Kit — Freshli</title>
+  <meta name="description" content="Freshli Press Kit. Logos, screenshots, and facts for media coverage." />
+  <meta name="theme-color" content="#22C55E" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <meta name="apple-itunes-app" content="app-id=6761957596" />
+  <style>
+    :root { --green-500: #22C55E; --green-600: #16A34A; --green-700: #15803D; --green-800: #166534; --green-50: #F0FDF4; --green-100: #DCFCE7; --teal-500: #14B8A6; --amber-500: #F59E0B; --neutral-50: #FAFAFA; --neutral-100: #F5F5F5; --neutral-600: #525252; --neutral-800: #1F2937; --neutral-900: #0A0A0A; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', system-ui, sans-serif; color: var(--neutral-800); background: #fff; }
+    nav { position: sticky; top: 0; z-index: 100; padding: 16px 24px; backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); background: rgba(255,255,255,0.72); border-bottom: 1px solid rgba(0,0,0,0.06); }
+    nav .inner { max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+    .logo { display: flex; align-items: center; gap: 8px; font-size: 20px; font-weight: 800; color: var(--green-800); text-decoration: none; letter-spacing: -0.5px; }
+    .logo span { font-size: 24px; }
+    .back-link { font-size: 14px; font-weight: 600; color: var(--green-700); text-decoration: none; }
+    .back-link:hover { text-decoration: underline; }
+    .press { max-width: 900px; margin: 0 auto; padding: 60px 24px 120px; }
+    .press h1 { font-size: 36px; font-weight: 900; letter-spacing: -1px; margin-bottom: 8px; }
+    .press .intro { font-size: 18px; color: var(--neutral-600); line-height: 1.6; margin-bottom: 48px; max-width: 600px; }
+    .press h2 { font-size: 22px; font-weight: 800; margin-top: 48px; margin-bottom: 16px; letter-spacing: -0.3px; }
+    .press p { font-size: 15px; line-height: 1.7; color: var(--neutral-600); margin-bottom: 12px; }
+    .press a { color: var(--green-700); }
+    .press strong { color: var(--neutral-800); }
+    .fact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 24px 0; }
+    .fact-card { padding: 24px; background: var(--neutral-50); border-radius: 16px; border: 1px solid var(--neutral-100); }
+    .fact-card .number { font-size: 32px; font-weight: 900; color: var(--green-500); letter-spacing: -1px; }
+    .fact-card .label { font-size: 14px; color: var(--neutral-600); margin-top: 4px; font-weight: 500; }
+    .boilerplate { padding: 24px; background: var(--green-50); border-radius: 16px; border: 1px solid var(--green-100); margin: 24px 0; }
+    .boilerplate p { color: var(--green-800); margin-bottom: 0; font-weight: 500; }
+    .color-row { display: flex; gap: 12px; flex-wrap: wrap; margin: 16px 0; }
+    .color-swatch { width: 64px; height: 64px; border-radius: 14px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 4px; font-size: 10px; font-weight: 700; color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,0.3); }
+    .tech-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin: 16px 0; }
+    .tech-pill { padding: 12px 16px; background: var(--neutral-50); border-radius: 12px; border: 1px solid var(--neutral-100); font-size: 14px; font-weight: 600; }
+    .tech-pill .dim { font-weight: 400; color: var(--neutral-600); }
+    footer { padding: 40px 24px; background: var(--neutral-900); color: rgba(255,255,255,0.5); text-align: center; font-size: 13px; }
+    footer a { color: rgba(255,255,255,0.5); text-decoration: none; margin: 0 12px; }
+    footer a:hover { color: #fff; }
+    @media (max-width: 640px) { .fact-grid { grid-template-columns: 1fr 1fr; } }
+  </style>
+</head>
+<body>
+  <nav><div class="inner"><a href="/" class="logo"><img src="icon.png" alt="Freshli" style="width:28px;height:28px;border-radius:7px;" /> Freshli</a><a href="/" class="back-link" data-i18n="nav.backHome">&larr; Back to home</a><div data-lang-picker></div></div></nav>
+
+  <div class="press">
+    <h1 data-i18n="press.title">Press Kit</h1>
+    <p class="intro" data-i18n="press.intro">Everything journalists and creators need to cover Freshli. For press inquiries, contact <a href="mailto:support@freshli.app">support@freshli.app</a>.</p>
+
+    <!-- v1.2.0 release banner -->
+    <div style="margin: 28px 0 40px; padding: 26px; border-radius: 18px; background: linear-gradient(135deg, #ECFDF5 0%, #FFFFFF 100%); border: 1px solid #22C55E33;">
+      <div style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; background: #22C55E1F; border-radius: 999px; font-size: 11px; font-weight: 800; color: #16A34A; letter-spacing: 0.5px; text-transform: uppercase;">
+        Latest release · v1.2.0 · May 2026
+      </div>
+      <h2 style="font-size: 26px; line-height: 1.2; font-weight: 800; margin: 14px 0 8px;">Freshli v1.2.0 — Grow Your Local Pod</h2>
+      <p style="font-size: 15px; line-height: 1.6; color: #475569; margin: 0 0 16px;">
+        118 UK postcode districts pre-seeded as community feeds, one-tap "Invite a Neighbour" with shared +100 Karma reward, daily streak engine, 16-tier achievement system, Spotlight pantry search, Writing Tools in the Community composer.
+      </p>
+      <details style="margin-top: 12px;">
+        <summary style="cursor: pointer; font-weight: 700; color: #16A34A; font-size: 14px;">Full press release →</summary>
+        <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid #E2E8F0; font-size: 14px; line-height: 1.6; color: #334155;">
+          <p><strong>FOR IMMEDIATE RELEASE — 20 May 2026</strong></p>
+          <p><strong>Freshli, the AI pantry app turning every UK postcode into a food-rescue community, launches v1.2.0 today.</strong></p>
+          <p>UK households throw away an estimated £17 billion of edible food every year. Freshli's premise is that most of it goes in the bin because people forget what they have, run out of recipe ideas, and have no friction-free way to give surplus to a neighbour. v1.2.0 closes the last gap — the cold-start problem that kills two-sided marketplaces — by guaranteeing every new user lands in a real, named community area on day one.</p>
+          <p><strong>What's new in 1.2.0:</strong></p>
+          <ul style="padding-left: 20px;">
+            <li>118 UK postcode districts pre-seeded as community areas, from Stornoway to Truro, Belfast to Brighton.</li>
+            <li>One-tap "Invite a Neighbour" — both inviter and invitee receive +100 Karma when the friend signs up, and the new user auto-joins the inviter's area.</li>
+            <li>Daily streak engine — opens accumulate, with bonus Karma at 7, 14, 30, 60, 100 and 365 days.</li>
+            <li>16-tier achievement system unlocking exclusive icons and donations to FareShare UK, Trees for the Future, and The Felix Project.</li>
+            <li>Spotlight pantry search — search "Bananas" from iOS and jump straight into the matched item.</li>
+            <li>Apple Intelligence Writing Tools in the Community listing composer.</li>
+            <li>Siri Shortcut: "Hey Siri, invite a neighbour to Freshli."</li>
+          </ul>
+          <p><strong>Privacy stance:</strong> No ads. No third-party tracking. No IDFA. No remote push. Recipes generated entirely on-device via Apple Intelligence — pantry data never leaves the iPhone for AI generation. Council Impact Reports aggregate at the postcode-district level only, fully anonymised, opt-in.</p>
+          <p><strong>Availability:</strong> Free on the App Store for iPhone and iPad running iOS 26 in 11 storefronts: United Kingdom, United States, Canada, Australia, Ireland, France, Germany, Italy, Japan, Netherlands, Brazil, Mexico, Spain. Apple Intelligence features require iPhone 15 Pro or later.</p>
+          <p><strong>Press contact:</strong> Jay Lawrence · <a href="mailto:support@freshli.app">support@freshli.app</a> · +44 7943 044223</p>
+        </div>
+      </details>
+    </div>
+
+    <h2 data-i18n="press.aboutTitle">About Freshli</h2>
+    <div class="boilerplate">
+      <p data-i18n="press.boilerplate">Freshli is an iOS app that helps households rescue food from the bin using on-device Apple Intelligence. Users track their pantry, get AI-generated recipes for expiring ingredients (entirely on-device, with zero network calls), cook hands-free with voice-guided recipe steps, share surplus food with neighbours, and watch their environmental impact grow week by week. Built with Swift 6.2, SwiftUI, SwiftData, and Metal 4 for iOS 26. For the people. For the planet.</p>
+    </div>
+
+    <h2 data-i18n="press.keyFacts">Key Facts</h2>
+    <div class="fact-grid">
+      <div class="fact-card"><div class="number">118</div><div class="label">UK community areas (v1.2.0)</div></div>
+      <div class="fact-card"><div class="number">11</div><div class="label">Storefronts localised</div></div>
+      <div class="fact-card"><div class="number">100%</div><div class="label" data-i18n="press.fact3">On-device AI processing</div></div>
+      <div class="fact-card"><div class="number">0</div><div class="label" data-i18n="press.fact4">Third-party trackers</div></div>
+      <div class="fact-card"><div class="number" id="currency-fact" data-gb="&pound;700" data-us="$1,500" data-eu="&euro;900" data-au="A$2,000" data-ca="C$1,700">&pound;700</div><div class="label" data-i18n="press.fact5">Average food waste/household/year</div></div>
+      <div class="fact-card"><div class="number">+100</div><div class="label">Karma per friend invited</div></div>
+      <div class="fact-card"><div class="number">2.5 kg</div><div class="label" data-i18n="press.fact6">CO&#8322; avoided per item rescued</div></div>
+      <div class="fact-card"><div class="number">16</div><div class="label">Lifetime achievement tiers</div></div>
+    </div>
+
+    <h2 data-i18n="press.differentTitle">What Makes Freshli Different</h2>
+    <ul style="padding-left: 24px; margin: 16px 0;">
+      <li style="font-size: 15px; line-height: 1.7; color: var(--neutral-600); margin-bottom: 8px;" data-i18n="press.diff1"><strong>On-device AI:</strong> Rescue Chef uses iOS 26's FoundationModels framework — recipes are generated entirely on-device. No server, no API cost, no privacy compromise.</li>
+      <li style="font-size: 15px; line-height: 1.7; color: var(--neutral-600); margin-bottom: 8px;" data-i18n="press.diff2"><strong>Community-first:</strong> Share surplus food with neighbours, donate to community fridges, join local pods for hyper-local food sharing.</li>
+      <li style="font-size: 15px; line-height: 1.7; color: var(--neutral-600); margin-bottom: 8px;" data-i18n="press.diff3"><strong>Impact you can feel:</strong> Weekly Wrap — a cinematic, shareable story of your food rescue impact with animated MeshGradient backgrounds and a growing tree.</li>
+      <li style="font-size: 15px; line-height: 1.7; color: var(--neutral-600); margin-bottom: 8px;" data-i18n="press.diff4"><strong>Hands-free cooking:</strong> Freshli reads every recipe step aloud so users never need to touch their phone while cooking. Eyes on the pan, not the screen.</li>
+      <li style="font-size: 15px; line-height: 1.7; color: var(--neutral-600); margin-bottom: 8px;" data-i18n="press.diff5"><strong>Gaze tracking accessibility:</strong> ARKit face tracking enables hands-free browsing — UI elements subtly inflate toward the user's gaze. Full WCAG 2.2 AA compliance.</li>
+      <li style="font-size: 15px; line-height: 1.7; color: var(--neutral-600); margin-bottom: 8px;" data-i18n="press.diff6"><strong>Deep platform integration:</strong> Apple Watch, Siri Shortcuts, Control Center widgets, Interactive Widgets, Live Activities, Dynamic Island, and ControlWidget quick actions.</li>
+    </ul>
+
+    <h2 data-i18n="press.techTitle">iOS 26 Technologies Used</h2>
+    <div class="tech-grid">
+      <div class="tech-pill">FoundationModels <span class="dim">— on-device AI</span></div>
+      <div class="tech-pill">MeshGradient <span class="dim">— animated backgrounds</span></div>
+      <div class="tech-pill">Liquid Glass <span class="dim">— .glassEffect()</span></div>
+      <div class="tech-pill">KeyframeAnimator <span class="dim">— choreographed motion</span></div>
+      <div class="tech-pill">SymbolEffect <span class="dim">— living SF Symbols</span></div>
+      <div class="tech-pill">TimelineView <span class="dim">— real-time animation</span></div>
+      <div class="tech-pill">SwiftData <span class="dim">— local persistence</span></div>
+      <div class="tech-pill">App Intents <span class="dim">— Siri + Shortcuts</span></div>
+      <div class="tech-pill">TipKit <span class="dim">— contextual coach marks</span></div>
+      <div class="tech-pill">ActivityKit <span class="dim">— 4 Live Activities</span></div>
+      <div class="tech-pill">Metal 4 <span class="dim">— custom MSL 3.2 shaders</span></div>
+      <div class="tech-pill">StoreKit 2 <span class="dim">— subscription management</span></div>
+      <div class="tech-pill">ControlWidget <span class="dim">— Control Center actions</span></div>
+      <div class="tech-pill">ARKit <span class="dim">— gaze tracking accessibility</span></div>
+      <div class="tech-pill">Writing Tools <span class="dim">— Community composer (v1.2.0)</span></div>
+      <div class="tech-pill">Core Spotlight <span class="dim">— pantry indexing (v1.2.0)</span></div>
+      <div class="tech-pill">Universal Links <span class="dim">— /i/&lt;code&gt; invite redemption (v1.2.0)</span></div>
+      <div class="tech-pill">Privacy Manifest <span class="dim">— full nutrition labels</span></div>
+    </div>
+
+    <h2 data-i18n="press.brandTitle">Brand Assets</h2>
+    <p data-i18n="press.appName"><strong>App name:</strong> Freshli</p>
+    <p data-i18n="press.tagline"><strong>Tagline:</strong> For the people. For the planet.</p>
+    <p data-i18n="press.subtitle"><strong>Subtitle:</strong> Rescue food. Save the planet.</p>
+    <p data-i18n="press.category"><strong>Category:</strong> Food & Drink (primary), Lifestyle (secondary)</p>
+
+    <h3 style="font-size: 17px; font-weight: 700; margin-top: 24px; margin-bottom: 12px;" data-i18n="press.colors">Brand Colours</h3>
+    <div class="color-row">
+      <div class="color-swatch" style="background: #22C55E;">#22C55E</div>
+      <div class="color-swatch" style="background: #16A34A;">#16A34A</div>
+      <div class="color-swatch" style="background: #15803D;">#15803D</div>
+      <div class="color-swatch" style="background: #14B8A6;">#14B8A6</div>
+      <div class="color-swatch" style="background: #F59E0B;">#F59E0B</div>
+      <div class="color-swatch" style="background: #0A0A0A;">#0A0A0A</div>
+    </div>
+
+    <h2 data-i18n="press.screenshots">Screenshots</h2>
+    <p data-i18n="press.screenshotsText">High-resolution App Store screenshots (1320 &times; 2868, iPhone 17 Pro Max) are available. Contact <a href="mailto:support@freshli.app">support@freshli.app</a> for the full press kit with device-framed mockups.</p>
+
+    <h2 data-i18n="press.featuredOn">Featured on</h2>
+    <p style="margin-bottom: 16px;">
+      <a href="https://www.producthunt.com/products/freshli?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-freshli"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="Freshli on Product Hunt">
+        <picture>
+          <source media="(prefers-color-scheme: dark)"
+                  srcset="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1126874&theme=dark&t=1777912833857" />
+          <img alt="Freshli — Rescue expiring food with on-device Apple Intelligence | Product Hunt"
+               width="250"
+               height="54"
+               src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1126874&theme=light&t=1777912833857"
+               loading="lazy"
+               style="display: block;" />
+        </picture>
+      </a>
+    </p>
+
+    <h2 data-i18n="press.contactTitle">Contact</h2>
+    <p><span data-i18n="press.pressEnquiries"><strong>Press inquiries:</strong></span> <a href="mailto:support@freshli.app">support@freshli.app</a></p>
+    <p><span data-i18n="press.website"><strong>Website:</strong></span> <a href="https://freshli.app">freshli.app</a></p>
+    <p data-i18n="press.appStore"><strong>App Store:</strong> Available on the App Store (iOS 26+)</p>
+  </div>
+
+  <script>
+    (() => {
+      const el = document.getElementById('currency-fact');
+      if (!el) return;
+      const lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+      let region = 'gb';
+      if (lang.includes('en-us') || tz.startsWith('America/') && !tz.includes('Toronto')) region = 'us';
+      else if (lang.includes('en-ca') || tz.includes('Toronto') || tz.includes('Vancouver')) region = 'ca';
+      else if (lang.includes('en-au') || tz.startsWith('Australia/')) region = 'au';
+      else if (lang.includes('en-gb') || tz.startsWith('Europe/London')) region = 'gb';
+      else if (tz.startsWith('Europe/')) region = 'eu';
+      else if (lang.startsWith('en')) region = 'us';
+      const val = el.getAttribute('data-' + region);
+      if (val) el.textContent = val;
+    })();
+  </script>
+
+  <footer>
+    <a href="/" data-i18n="footer.home">Home</a> <a href="about.html" data-i18n="footer.ourStory">Our Story</a> <a href="partners.html" data-i18n="footer.partners">Partners</a> <a href="social.html" data-i18n="footer.social">Social</a> <a href="privacy.html" data-i18n="footer.privacy">Privacy</a> <a href="terms.html" data-i18n="footer.terms">Terms</a> <a href="support.html" data-i18n="footer.support">Support</a> <a href="press.html" data-i18n="footer.press">Press</a> <a href="mailto:support@freshli.app" data-i18n="footer.contact">Contact</a>
+    <p style="margin-top: 16px;" data-i18n="footer.rights">&copy; 2026 Freshli. All rights reserved.</p>
+  </footer>
+  <script src="i18n/en.js"></script>
+  <script src="i18n.js" defer></script>
+</body>
+</html>
